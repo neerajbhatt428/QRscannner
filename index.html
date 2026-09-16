@@ -6,6 +6,54 @@
 <title>Scan a QR code — free online QR reader</title>
 <meta name="description" content="Point your camera at a QR code or drop in an image. Reads links, Wi-Fi logins, contacts and plain text right in your browser. Nothing is uploaded.">
 <link rel="canonical" href="https://example.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QR code scanner — read any QR code in your browser">
+<meta property="og:description" content="Scan with your camera or upload an image. Reads links, Wi-Fi logins and contacts on your device. Free, no app, no sign-up.">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Structured data: lets Google show the FAQ and app details in results.
+     Every question below must stay visible on the page or Google drops it. -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"QR Reader",
+      "url":"https://example.com/",
+      "applicationCategory":"UtilitiesApplication",
+      "operatingSystem":"Any browser",
+      "browserRequirements":"Requires JavaScript and a camera for live scanning",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "featureList":"Camera QR scanning, image upload, Wi-Fi and contact decoding, on-device processing"
+    },
+    {
+      "@type":"HowTo",
+      "name":"How to scan a QR code in a browser",
+      "totalTime":"PT1M",
+      "step":[
+        {"@type":"HowToStep","name":"Start the camera","text":"Press Start camera and allow access when the browser asks."},
+        {"@type":"HowToStep","name":"Line up the code","text":"Hold the QR code inside the frame until the pattern is sharp."},
+        {"@type":"HowToStep","name":"Read the result","text":"The decoded text appears below, with a button to open or copy it."}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Does this work on iPhone and Android?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in Safari, Chrome, Firefox, Edge and Samsung Internet on both phones and computers. On iPhone, camera access requires Safari or a browser using Safari's engine, and you will be asked for permission the first time."}},
+        {"@type":"Question","name":"Can I scan a QR code that is already on my phone screen?","acceptedAnswer":{"@type":"Answer","text":"Take a screenshot, then upload it here. A camera cannot easily read a code on the same screen it is displayed on, so the screenshot route is the reliable one."}},
+        {"@type":"Question","name":"Why does the camera say it is blocked?","acceptedAnswer":{"@type":"Answer","text":"Permission was declined at some point, or the page is not on an HTTPS address. Open your browser's site settings for this page, set the camera to Allow, and reload."}},
+        {"@type":"Question","name":"Can it read barcodes as well?","acceptedAnswer":{"@type":"Answer","text":"Not currently. This reads QR codes only, including the Micro QR variants. Product barcodes use a different symbol system."}},
+        {"@type":"Question","name":"Will a damaged or partly covered code still scan?","acceptedAnswer":{"@type":"Answer","text":"Often, yes. QR codes carry error correction, and depending on the level chosen when the code was created, up to about 30 per cent of the pattern can be lost before it becomes unreadable. The three large squares in the corners must stay intact."}},
+        {"@type":"Question","name":"Is it free, and are there limits?","acceptedAnswer":{"@type":"Answer","text":"Free, with no account, no watermark and no cap on how many codes you scan."}}
+      ]
+    }
+  ]
+}
+</script>
 
 <!-- ============================================================
      GOOGLE ADSENSE — paste your publisher ID and uncomment.
@@ -145,6 +193,28 @@ h2{font-family:var(--display);font-weight:700;font-size:1.25rem;margin:0;letter-
 .history time{font-size:.75rem;color:var(--muted);flex:none}
 .empty{color:var(--muted);font-size:.9375rem;margin:0}
 
+/* ---------- article ---------- */
+.article{margin:44px 0 0;max-width:68ch}
+.article h2{margin:36px 0 10px;font-size:1.5rem}
+.article h2:first-child{margin-top:0}
+.article h3{font-family:var(--display);font-weight:700;font-size:1.0625rem;
+  letter-spacing:-.015em;margin:28px 0 8px}
+.article p{margin:0 0 12px;color:#3A3E46}
+.article ul{margin:0 0 12px;padding-left:20px;color:#3A3E46}
+.article li{margin:0 0 6px}
+.article strong{font-weight:600;color:var(--ink)}
+.article code{font-family:var(--mono);font-size:.875em;background:var(--surface);
+  border:1px solid var(--line);border-radius:3px;padding:1px 4px}
+.faq{margin:14px 0 0;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:14px 2px;font-weight:500;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--blue);font-size:1.25rem;line-height:1;flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.faq details p{margin:0 0 14px;color:#3A3E46;max-width:62ch}
+
 /* ---------- notes ---------- */
 .notes{margin:12px 0 0;color:var(--muted);font-size:.9375rem;max-width:62ch}
 .notes p{margin:0 0 10px}
@@ -255,12 +325,62 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
   <p class="empty" id="histEmpty">Codes you scan will be listed here, on this device only.</p>
   <ul class="history" id="history"></ul>
 
-  <div class="section-head"><h2>Good to know</h2></div>
-  <div class="notes">
-    <p>Decoding happens in your browser using your device's processor. No photo or camera frame is sent to a server.</p>
-    <p>Camera access needs an HTTPS address. On a local file or plain HTTP the browser will block it, and only image upload will work.</p>
-    <p>Open a scanned link only if you recognise where it goes. QR codes in public places are sometimes swapped by scammers.</p>
-  </div>
+  <article class="article">
+    <h2>How to scan a QR code without installing an app</h2>
+    <p>A QR code is a grid of black and white squares that stores a short piece of text — usually a web address, but it can hold a Wi-Fi password, a phone number, a contact card or a payment request. Reading one takes a camera and a decoder, and every modern browser already has both. You do not need to install anything.</p>
+    <p>On this page, press <strong>Start camera</strong> and hold the code inside the blue frame. As soon as the pattern is sharp enough to read, the result appears underneath with a button to open it. If you are on a laptop with a code on your phone screen, or the other way round, hold the screen about 20&nbsp;cm from the lens and wait a second for the camera to focus.</p>
+
+    <h3>Reading a QR code from a screenshot or saved picture</h3>
+    <p>Codes arrive by email, in a PDF invoice or in a chat message more often than they appear on a poster, and you cannot point a camera at your own screen easily. Press <strong>Upload image</strong> and pick the file, or simply drag the picture onto this page, or copy it and press Ctrl+V. The decoder runs several passes at different sizes and adjusts contrast automatically, so screenshots, scanned documents and photographs taken at an angle usually work.</p>
+    <p>If a picture refuses to read, the cause is nearly always one of four things: the image is blurred, the code is partly cut off, there is glare across the pattern, or the code has been stretched out of square. Cropping tightly around the code and trying again fixes most of them.</p>
+
+    <h3>What a QR code can contain</h3>
+    <p>The scanner recognises the standard formats and lays them out in plain language rather than showing you raw text:</p>
+    <ul>
+      <li><strong>Website link</strong> — shows the destination domain before you open it.</li>
+      <li><strong>Wi-Fi login</strong> — splits out the network name, the security type and the password so you can copy it.</li>
+      <li><strong>Contact card</strong> — the name, phone number, email and company stored in a vCard.</li>
+      <li><strong>UPI payment</strong> — the payee address, name and any fixed amount, which is worth checking before you pay.</li>
+      <li><strong>Phone, SMS, email and location</strong> — ready to dial, write or open in a map.</li>
+      <li><strong>Plain text</strong> — serial numbers, ticket references, tracking IDs and anything else.</li>
+    </ul>
+
+    <h3>Is it safe to scan a QR code?</h3>
+    <p>Scanning is safe. Acting on what you find is where the risk sits. Because a printed code gives no hint of where it leads, criminals stick their own codes over genuine ones on parking meters, restaurant tables and payment counters — a trick known as quishing. The fake code leads to a convincing copy of a payment page.</p>
+    <p>Two habits remove most of the danger. Check the domain shown in the result panel before you open anything, and treat a code that asks for a payment, a login or card details with suspicion unless you are certain of its source. On physical signage, run a finger over the code: a sticker laid over the original has an edge you can feel.</p>
+
+    <h3>Your images never leave your device</h3>
+    <p>Decoding runs entirely in your browser, using your own processor. No camera frame and no uploaded picture is ever sent to a server, which also means the page keeps working if your connection drops after it has loaded. Your recent scans are stored only in this browser and clear whenever you press <em>Clear all</em>.</p>
+    <p>One requirement is outside our control: browsers only grant camera access to pages served over HTTPS. If the camera button reports that it is blocked, check that the address begins with <code>https://</code>, then check your browser's site permissions.</p>
+
+    <h2>Common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Does this work on iPhone and Android?</summary>
+        <p>Yes. It runs in Safari, Chrome, Firefox, Edge and Samsung Internet on both phones and computers. On iPhone, camera access requires Safari or a browser using Safari's engine, and you will be asked for permission the first time.</p>
+      </details>
+      <details>
+        <summary>Can I scan a QR code that is already on my phone screen?</summary>
+        <p>Take a screenshot, then upload it here. A camera cannot easily read a code on the same screen it is displayed on, so the screenshot route is the reliable one.</p>
+      </details>
+      <details>
+        <summary>Why does the camera say it is blocked?</summary>
+        <p>Permission was declined at some point, or the page is not on an HTTPS address. Open your browser's site settings for this page, set the camera to Allow, and reload.</p>
+      </details>
+      <details>
+        <summary>Can it read barcodes as well?</summary>
+        <p>Not currently. This reads QR codes only, including the Micro QR variants. Product barcodes use a different symbol system.</p>
+      </details>
+      <details>
+        <summary>Will a damaged or partly covered code still scan?</summary>
+        <p>Often, yes. QR codes carry error correction, and depending on the level chosen when the code was created, up to about 30 per cent of the pattern can be lost before it becomes unreadable. The three large squares in the corners must stay intact.</p>
+      </details>
+      <details>
+        <summary>Is it free, and are there limits?</summary>
+        <p>Free, with no account, no watermark and no cap on how many codes you scan.</p>
+      </details>
+    </div>
+  </article>
 
   <!-- ===== AD SLOT 2 — bottom banner ===== -->
   <div class="ad">
