@@ -3,16 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Free Online QR Code Scanner — Read QR Codes in Browser</title>
-<meta name="description" content="Point your camera at a QR code or drop in an image. Reads links, Wi-Fi logins, contacts and plain text right in your browser. Nothing is uploaded.">
-<link rel="canonical" href="https://example.com/">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Free QR Code Scanner & Generator Online — Scan & Create QR Codes</title>
+<meta name="description" content="Free online QR code scanner and generator. Scan with your camera or upload an image, or create QR codes for URLs, text, Wi-Fi, phone, email, SMS, UPI and contacts. Everything runs in your browser.">
+<link rel="canonical" href="https://qrcodescanner.co.in/">
+<meta name="author" content="QR Code Scanner & Generator">
+<meta name="theme-color" content="#1B4DFF">
+<meta name="application-name" content="QR Code Scanner & Generator">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="QR code scanner — read any QR code in your browser">
-<meta property="og:description" content="Scan with your camera or upload an image. Reads links, Wi-Fi logins and contacts on your device. Free, no app, no sign-up.">
-<meta property="og:url" content="https://example.com/">
-<meta property="og:image" content="https://example.com/preview.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="QR Code Scanner & Generator">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Free QR Code Scanner & Generator Online">
+<meta property="og:description" content="Scan QR codes online with your camera or image, or create QR codes for URLs, text, Wi-Fi, phone, email, SMS, UPI and contacts. Free and browser-based.">
+<meta property="og:url" content="https://qrcodescanner.co.in/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free QR Code Scanner & Generator Online">
+<meta name="twitter:description" content="Scan QR codes or create your own QR code online. Free, fast and browser-based.">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
 
 <!-- Structured data: lets Google show the FAQ and app details in results.
      Every question below must stay visible on the page or Google drops it. -->
@@ -21,34 +30,87 @@
   "@context":"https://schema.org",
   "@graph":[
     {
-      "@type":"WebApplication",
-      "name":"QR Reader",
-      "url":"https://example.com/",
-      "applicationCategory":"UtilitiesApplication",
-      "operatingSystem":"Any browser",
-      "browserRequirements":"Requires JavaScript and a camera for live scanning",
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-      "featureList":"Camera QR scanning, image upload, Wi-Fi and contact decoding, on-device processing"
+      "@type":"WebSite",
+      "@id":"https://qrcodescanner.co.in/#website",
+      "url":"https://qrcodescanner.co.in/",
+      "name":"QR Code Scanner & Generator",
+      "description":"Free online QR code scanner and QR code generator for URLs, text, Wi-Fi, phone, email, SMS, UPI and contacts."
     },
     {
-      "@type":"HowTo",
-      "name":"How to scan a QR code in a browser",
-      "totalTime":"PT1M",
-      "step":[
-        {"@type":"HowToStep","name":"Start the camera","text":"Press Start camera and allow access when the browser asks."},
-        {"@type":"HowToStep","name":"Line up the code","text":"Hold the QR code inside the frame until the pattern is sharp."},
-        {"@type":"HowToStep","name":"Read the result","text":"The decoded text appears below, with a button to open or copy it."}
+      "@type":"WebApplication",
+      "@id":"https://qrcodescanner.co.in/#application",
+      "name":"QR Code Scanner & Generator",
+      "url":"https://qrcodescanner.co.in/",
+      "applicationCategory":"UtilitiesApplication",
+      "operatingSystem":"Any browser",
+      "browserRequirements":"Requires JavaScript. Camera scanning requires camera permission and HTTPS.",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"USD"
+      },
+      "featureList":[
+        "Online QR code scanner",
+        "Camera QR code scanner",
+        "QR code image upload scanner",
+        "Free QR code generator",
+        "URL QR code generator",
+        "Text QR code generator",
+        "Wi-Fi QR code generator",
+        "Phone QR code generator",
+        "Email QR code generator",
+        "SMS QR code generator",
+        "UPI QR code generator",
+        "Contact QR code generator",
+        "Download QR code as PNG"
       ]
     },
     {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Does this work on iPhone and Android?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in Safari, Chrome, Firefox, Edge and Samsung Internet on both phones and computers. On iPhone, camera access requires Safari or a browser using Safari's engine, and you will be asked for permission the first time."}},
-        {"@type":"Question","name":"Can I scan a QR code that is already on my phone screen?","acceptedAnswer":{"@type":"Answer","text":"Take a screenshot, then upload it here. A camera cannot easily read a code on the same screen it is displayed on, so the screenshot route is the reliable one."}},
-        {"@type":"Question","name":"Why does the camera say it is blocked?","acceptedAnswer":{"@type":"Answer","text":"Permission was declined at some point, or the page is not on an HTTPS address. Open your browser's site settings for this page, set the camera to Allow, and reload."}},
-        {"@type":"Question","name":"Can it read barcodes as well?","acceptedAnswer":{"@type":"Answer","text":"Not currently. This reads QR codes only, including the Micro QR variants. Product barcodes use a different symbol system."}},
-        {"@type":"Question","name":"Will a damaged or partly covered code still scan?","acceptedAnswer":{"@type":"Answer","text":"Often, yes. QR codes carry error correction, and depending on the level chosen when the code was created, up to about 30 per cent of the pattern can be lost before it becomes unreadable. The three large squares in the corners must stay intact."}},
-        {"@type":"Question","name":"Is it free, and are there limits?","acceptedAnswer":{"@type":"Answer","text":"Free, with no account, no watermark and no cap on how many codes you scan."}}
+      "@type":"HowTo",
+      "@id":"https://qrcodescanner.co.in/#how-to-scan",
+      "name":"How to scan a QR code online",
+      "description":"Scan a QR code with your device camera or upload an image.",
+      "totalTime":"PT1M",
+      "step":[
+        {
+          "@type":"HowToStep",
+          "name":"Start the QR scanner",
+          "text":"Open the Scan QR Code tab and press Start camera. Allow camera access when your browser asks."
+        },
+        {
+          "@type":"HowToStep",
+          "name":"Scan the QR code",
+          "text":"Hold the QR code inside the camera frame until it is detected."
+        },
+        {
+          "@type":"HowToStep",
+          "name":"Read the result",
+          "text":"The decoded QR content appears on the page, where you can copy it or open supported links."
+        }
+      ]
+    },
+    {
+      "@type":"HowTo",
+      "@id":"https://qrcodescanner.co.in/#how-to-create",
+      "name":"How to create a QR code online",
+      "description":"Create a free QR code for a URL, text, Wi-Fi network, phone number, email, SMS, UPI payment or contact.",
+      "totalTime":"PT1M",
+      "step":[
+        {
+          "@type":"HowToStep",
+          "name":"Choose Create QR Code",
+          "text":"Open the Create QR Code tab."
+        },
+        {
+          "@type":"HowToStep",
+          "name":"Enter your information",
+          "text":"Choose the QR code type and enter the requested information."
+        },
+        {
+          "@type":"HowToStep",
+          "name":"Generate and download",
+          "text":"Press Generate QR Code and download the resulting PNG image."
+        }
       ]
     }
   ]
@@ -217,6 +279,49 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
   background:var(--ink);color:#fff;padding:10px 18px;border-radius:100px;
   font-size:.875rem;opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:20}
 .toast.show{opacity:1}
+
+/* ---------- tool mode switch ---------- */
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#DCDCD6;
+  border:1px solid var(--line);padding:4px;border-radius:var(--radius);margin:0 0 18px}
+.mode-switch button{border:0;background:transparent;padding:10px 12px;justify-content:center;font-weight:600}
+.mode-switch button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tool-panel[hidden]{display:none}
+
+/* ---------- QR generator ---------- */
+.generator-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.generator-card h2{margin:0 0 4px}
+.generator-label{display:block;font-weight:600;margin:0 0 8px}
+.generator-type{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.generator-type button{font-size:.8125rem;padding:7px 11px}
+.generator-type button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.generator-field{margin:0 0 13px}
+.generator-field label{display:block;font-size:.8125rem;color:var(--muted);margin:0 0 5px}
+.generator-field input,.generator-field textarea,.generator-field select{
+  width:100%;font:inherit;border:1px solid var(--line);background:#fff;color:var(--ink);
+  border-radius:var(--radius);padding:11px 12px;outline:none}
+.generator-field textarea{min-height:105px;resize:vertical}
+.generator-field input:focus,.generator-field textarea:focus,.generator-field select:focus{
+  border-color:var(--blue);outline:2px solid rgba(27,77,255,.12)}
+.generator-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.generator-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.generator-actions .primary{flex:1 1 190px}
+.qr-preview{margin:18px 0 0;padding:20px;background:#F7F7F3;border:1px solid var(--line);
+  display:grid;place-items:center;min-height:280px}
+#qrOutput{background:#fff;padding:14px;line-height:0}
+#qrOutput canvas,#qrOutput img{display:block;max-width:100%;height:auto}
+.generator-note{margin:12px 0 0;color:var(--muted);font-size:.8125rem}
+.color-input{height:44px;padding:4px!important;cursor:pointer}
+@media(max-width:520px){
+  .generator-grid{grid-template-columns:1fr}
+  .generator-card{padding:14px}
+  .qr-preview{min-height:250px;padding:14px}
+}
+
+
+.tool-intro{margin:0 0 22px;max-width:68ch}
+.tool-intro h2{font-family:var(--display);font-weight:700;font-size:1.35rem;margin:0 0 7px;letter-spacing:-.02em}
+.tool-intro p{margin:0;color:#3A3E46;font-size:.95rem}
+
 </style>
 </head>
 <body>
@@ -230,12 +335,23 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
       <path fill="#1B4DFF" d="M5.5 5.5h2v2h-2zm11 0h2v2h-2zm-11 11h2v2h-2z"/>
       <path fill="#14161A" d="M13 13h3v3h-3zm6 0h3v3h-3zm-6 6h3v3h-3zm6 0h3v3h-3zm-3-3h3v3h-3z"/>
     </svg>
-    <span class="wordmark">QR Reader</span>
+    <span class="wordmark">QR Scanner & Generator</span>
   </header>
 
-  <h1 class="lede">Point, and it reads.</h1>
-  <p class="sub">Hold a QR code up to your camera, or drop in a photo. Links, Wi-Fi logins, contacts and plain text are decoded on your device — no image ever leaves this page.</p>
+  <h1 class="lede">Free QR Code Scanner & Generator</h1>
+  <p class="sub">Scan QR codes online with your camera or upload an image. Create QR codes for URLs, text, Wi-Fi, phone numbers, email, SMS, UPI and contacts. Free, fast and private — everything runs in your browser.</p>
 
+  <div class="mode-switch" role="tablist" aria-label="QR tools">
+    <button id="scanTab" role="tab" aria-selected="true">Scan QR Code</button>
+    <button id="generateTab" role="tab" aria-selected="false">Create QR Code</button>
+  </div>
+
+  <div class="tool-intro">
+    <h2>Online QR Code Scanner and QR Code Generator</h2>
+    <p>Use this free QR code tool to <strong>scan QR codes online</strong> or <strong>create a QR code</strong> without installing an app. Scan from your camera, upload a QR image, or generate a QR code for a link, text, Wi-Fi network, phone, email, SMS, UPI payment or contact.</p>
+  </div>
+
+  <div class="tool-panel" id="scanPanel">
   <!-- SCANNER -->
   <div class="stage" id="stage">
     <video id="video" playsinline muted></video>
@@ -293,6 +409,70 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
     </div>
   </section>
 
+  </div>
+
+  <!-- GENERATOR -->
+  <div class="tool-panel" id="generatePanel" hidden>
+    <section class="generator-card" aria-labelledby="generatorTitle">
+      <h2 id="generatorTitle">Create a QR code</h2>
+      <p class="notes" style="margin:4px 0 16px">Choose what your QR code should contain, enter the details, then generate and download it.</p>
+
+      <label class="generator-label">QR code type</label>
+      <div class="generator-type" role="group" aria-label="QR code type">
+        <button type="button" data-qr-type="url" aria-pressed="true">URL / Text</button>
+        <button type="button" data-qr-type="wifi" aria-pressed="false">Wi-Fi</button>
+        <button type="button" data-qr-type="phone" aria-pressed="false">Phone</button>
+        <button type="button" data-qr-type="email" aria-pressed="false">Email</button>
+        <button type="button" data-qr-type="sms" aria-pressed="false">SMS</button>
+        <button type="button" data-qr-type="upi" aria-pressed="false">UPI</button>
+        <button type="button" data-qr-type="contact" aria-pressed="false">Contact</button>
+      </div>
+
+      <div id="generatorFields"></div>
+
+      <div class="generator-grid">
+        <div class="generator-field">
+          <label for="qrSize">QR size</label>
+          <select id="qrSize">
+            <option value="180">180 × 180</option>
+            <option value="240" selected>240 × 240</option>
+            <option value="300">300 × 300</option>
+            <option value="400">400 × 400</option>
+            <option value="500">500 × 500</option>
+          </select>
+        </div>
+        <div class="generator-field">
+          <label for="qrLevel">Error correction</label>
+          <select id="qrLevel">
+            <option value="L">Low — 7%</option>
+            <option value="M" selected>Medium — 15%</option>
+            <option value="Q">Quartile — 25%</option>
+            <option value="H">High — 30%</option>
+          </select>
+        </div>
+        <div class="generator-field">
+          <label for="qrDark">Foreground color</label>
+          <input class="color-input" id="qrDark" type="color" value="#14161A">
+        </div>
+        <div class="generator-field">
+          <label for="qrLight">Background color</label>
+          <input class="color-input" id="qrLight" type="color" value="#FFFFFF">
+        </div>
+      </div>
+
+      <div class="qr-preview">
+        <div id="qrOutput"></div>
+      </div>
+
+      <div class="generator-actions">
+        <button class="primary" id="generateBtn" type="button">Generate QR Code</button>
+        <button id="downloadQrBtn" type="button" disabled>Download PNG</button>
+        <button id="copyQrBtn" type="button" disabled>Copy QR</button>
+      </div>
+      <p class="generator-note" id="generatorStatus">Enter your details above and generate your QR code.</p>
+    </section>
+  </div>
+
   <!-- HISTORY -->
   <div class="section-head">
     <h2>Recent scans</h2>
@@ -302,7 +482,7 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
   <ul class="history" id="history"></ul>
 
   <article class="article">
-    <h2>How to scan a QR code without installing an app</h2>
+    <h2>How to scan a QR code online</h2>
     <p>A QR code is a grid of black and white squares that stores a short piece of text — usually a web address, but it can hold a Wi-Fi password, a phone number, a contact card or a payment request. Reading one takes a camera and a decoder, and every modern browser already has both. You do not need to install anything.</p>
     <p>On this page, press <strong>Start camera</strong> and hold the code inside the blue frame. As soon as the pattern is sharp enough to read, the result appears underneath with a button to open it. If you are on a laptop with a code on your phone screen, or the other way round, hold the screen about 20&nbsp;cm from the lens and wait a second for the camera to focus.</p>
 
@@ -328,6 +508,14 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
     <h3>Your images never leave your device</h3>
     <p>Decoding runs entirely in your browser, using your own processor. No camera frame and no uploaded picture is ever sent to a server, which also means the page keeps working if your connection drops after it has loaded. Your recent scans are stored only in this browser and clear whenever you press <em>Clear all</em>.</p>
     <p>One requirement is outside our control: browsers only grant camera access to pages served over HTTPS. If the camera button reports that it is blocked, check that the address begins with <code>https://</code>, then check your browser's site permissions.</p>
+
+
+    <h2>How to create a QR code online</h2>
+    <p>Open the <strong>Create QR Code</strong> tab to turn a website address, text, Wi-Fi login, phone number, email, SMS message, UPI payment details or contact card into a QR code. Enter the information, choose your preferred size and colors, then press <strong>Generate QR Code</strong>.</p>
+    <p>The QR code is created directly in your browser. You can download it as a PNG image or copy the QR image when your browser supports image clipboard access.</p>
+
+    <h3>Create Wi-Fi, UPI and contact QR codes</h3>
+    <p>For Wi-Fi, enter the network name, password and security type. For UPI, enter the UPI ID and optional payee name, amount and note. Contact QR codes can contain a name, phone number, email and company. Always verify payment details before completing a payment.</p>
 
     <h2>Common questions</h2>
     <div class="faq">
@@ -355,16 +543,29 @@ footer{margin:44px 0 0;padding:18px 0 0;border-top:1px solid var(--line);
         <summary>Is it free, and are there limits?</summary>
         <p>Free, with no account, no watermark and no cap on how many codes you scan.</p>
       </details>
+      <details>
+        <summary>Can I create a QR code for a website?</summary>
+        <p>Yes. Open Create QR Code, choose URL / Text, enter your website address and press Generate QR Code. You can then download the QR code as a PNG.</p>
+      </details>
+      <details>
+        <summary>Can I create a Wi-Fi QR code?</summary>
+        <p>Yes. Choose Wi-Fi in the QR generator and enter the network name, password and security type.</p>
+      </details>
+      <details>
+        <summary>Does the QR code generator work on phones?</summary>
+        <p>Yes. The QR scanner and generator are designed to work in modern mobile and desktop browsers.</p>
+      </details>
   </article>
 
   <footer>
-    <p>QR Reader · <a href="#" style="color:inherit">Privacy</a></p>
+    <p>QR Scanner & Generator · <a href="#" style="color:inherit">Privacy</a></p>
   </footer>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
 // Fallback if jsDelivr is blocked or down.
 if(!window.jsQR){
@@ -712,6 +913,202 @@ if(!window.jsQR){
     lastValue = "";
     if(!stream) startCamera(); else say("Looking for a code…");
   });
+
+
+  /* ---------- QR generator + tool tabs ---------- */
+  var scanTab=$("scanTab"), generateTab=$("generateTab"),
+      scanPanel=$("scanPanel"), generatePanel=$("generatePanel");
+
+  function setMode(mode){
+    var isScan = mode === "scan";
+    scanTab.setAttribute("aria-selected", String(isScan));
+    generateTab.setAttribute("aria-selected", String(!isScan));
+    scanPanel.hidden = !isScan;
+    generatePanel.hidden = isScan;
+    if(!isScan && stream) stopCamera();
+  }
+
+  scanTab.addEventListener("click", function(){ setMode("scan"); });
+  generateTab.addEventListener("click", function(){ setMode("generate"); });
+
+  var qrType="url", generatedData="";
+  var generatorFields=$("generatorFields"),
+      qrOutput=$("qrOutput"),
+      generateBtn=$("generateBtn"),
+      downloadQrBtn=$("downloadQrBtn"),
+      copyQrBtn=$("copyQrBtn"),
+      qrSize=$("qrSize"),
+      qrLevel=$("qrLevel"),
+      qrDark=$("qrDark"),
+      qrLight=$("qrLight"),
+      generatorStatus=$("generatorStatus");
+
+  var generatorTemplates={
+    url:'<div class="generator-field"><label for="gText">Text or URL</label><textarea id="gText" placeholder="https://example.com">https://example.com</textarea></div>',
+    wifi:'<div class="generator-field"><label for="gSsid">Wi-Fi network name (SSID)</label><input id="gSsid" type="text" placeholder="My Wi-Fi"></div><div class="generator-field"><label for="gPass">Wi-Fi password</label><input id="gPass" type="text" placeholder="Password"></div><div class="generator-field"><label for="gSecurity">Security</label><select id="gSecurity"><option value="WPA">WPA / WPA2 / WPA3</option><option value="WEP">WEP</option><option value="nopass">No password</option></select></div>',
+    phone:'<div class="generator-field"><label for="gPhone">Phone number</label><input id="gPhone" type="tel" placeholder="+91 98765 43210"></div>',
+    email:'<div class="generator-field"><label for="gEmail">Email address</label><input id="gEmail" type="email" placeholder="hello@example.com"></div><div class="generator-field"><label for="gSubject">Subject</label><input id="gSubject" type="text" placeholder="Hello"></div><div class="generator-field"><label for="gBody">Message</label><textarea id="gBody" placeholder="Your message"></textarea></div>',
+    sms:'<div class="generator-field"><label for="gSmsPhone">Phone number</label><input id="gSmsPhone" type="tel" placeholder="+91 98765 43210"></div><div class="generator-field"><label for="gSmsBody">Message</label><textarea id="gSmsBody" placeholder="Your message"></textarea></div>',
+    upi:'<div class="generator-field"><label for="gUpiId">UPI ID</label><input id="gUpiId" type="text" placeholder="name@upi"></div><div class="generator-field"><label for="gUpiName">Payee name</label><input id="gUpiName" type="text" placeholder="Your Name"></div><div class="generator-grid"><div class="generator-field"><label for="gUpiAmount">Amount (optional)</label><input id="gUpiAmount" type="number" min="0" step="0.01" placeholder="100"></div><div class="generator-field"><label for="gUpiNote">Note (optional)</label><input id="gUpiNote" type="text" placeholder="Payment"></div></div>',
+    contact:'<div class="generator-field"><label for="gName">Full name</label><input id="gName" type="text" placeholder="John Doe"></div><div class="generator-field"><label for="gContactPhone">Phone</label><input id="gContactPhone" type="tel" placeholder="+91 98765 43210"></div><div class="generator-field"><label for="gContactEmail">Email</label><input id="gContactEmail" type="email" placeholder="hello@example.com"></div><div class="generator-field"><label for="gCompany">Company (optional)</label><input id="gCompany" type="text" placeholder="Company name"></div>'
+  };
+
+  function renderGeneratorFields(){
+    generatorFields.innerHTML=generatorTemplates[qrType];
+  }
+
+  document.querySelectorAll("[data-qr-type]").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      qrType=btn.getAttribute("data-qr-type");
+      document.querySelectorAll("[data-qr-type]").forEach(function(b){
+        b.setAttribute("aria-pressed",String(b===btn));
+      });
+      renderGeneratorFields();
+      qrOutput.innerHTML="";
+      generatedData="";
+      downloadQrBtn.disabled=true;
+      copyQrBtn.disabled=true;
+      generatorStatus.textContent="Enter your details above and generate your QR code.";
+      generatorStatus.classList.remove("err");
+    });
+  });
+
+  function gval(id){
+    var el=$(id);
+    return el ? el.value.trim() : "";
+  }
+
+  function enc(v){ return encodeURIComponent(v || ""); }
+
+  function wifiEscape(v){
+    return String(v || "").replace(/([\\;,:"])/g,"\\$1");
+  }
+
+  function buildQrData(){
+    if(qrType==="url") return gval("gText");
+
+    if(qrType==="wifi"){
+      var ssid=gval("gSsid");
+      if(!ssid) return "";
+      return "WIFI:T:"+(gval("gSecurity")||"WPA")+";S:"+wifiEscape(ssid)+";P:"+wifiEscape(gval("gPass"))+";;";
+    }
+
+    if(qrType==="phone"){
+      return gval("gPhone") ? "tel:"+gval("gPhone") : "";
+    }
+
+    if(qrType==="email"){
+      var email=gval("gEmail");
+      if(!email) return "";
+      return "mailto:"+email+"?subject="+enc(gval("gSubject"))+"&body="+enc(gval("gBody"));
+    }
+
+    if(qrType==="sms"){
+      var number=gval("gSmsPhone");
+      return number ? "SMSTO:"+number+":"+gval("gSmsBody") : "";
+    }
+
+    if(qrType==="upi"){
+      var pa=gval("gUpiId");
+      if(!pa) return "";
+      var u="upi://pay?pa="+enc(pa);
+      if(gval("gUpiName")) u+="&pn="+enc(gval("gUpiName"));
+      if(gval("gUpiAmount")) u+="&am="+enc(gval("gUpiAmount"));
+      if(gval("gUpiNote")) u+="&tn="+enc(gval("gUpiNote"));
+      return u+"&cu=INR";
+    }
+
+    if(qrType==="contact"){
+      var name=gval("gName");
+      if(!name) return "";
+      return "BEGIN:VCARD\nVERSION:3.0\nFN:"+name+
+        (gval("gContactPhone") ? "\nTEL:"+gval("gContactPhone") : "")+
+        (gval("gContactEmail") ? "\nEMAIL:"+gval("gContactEmail") : "")+
+        (gval("gCompany") ? "\nORG:"+gval("gCompany") : "")+
+        "\nEND:VCARD";
+    }
+    return "";
+  }
+
+  function generateQr(){
+    if(!window.QRCode){
+      generatorStatus.textContent="QR generator library did not load. Check your internet connection.";
+      generatorStatus.classList.add("err");
+      return;
+    }
+
+    var data=buildQrData();
+    if(!data){
+      generatorStatus.textContent="Please enter the required information first.";
+      generatorStatus.classList.add("err");
+      return;
+    }
+
+    var levels={L:QRCode.CorrectLevel.L,M:QRCode.CorrectLevel.M,Q:QRCode.CorrectLevel.Q,H:QRCode.CorrectLevel.H};
+
+    qrOutput.innerHTML="";
+    try{
+      new QRCode(qrOutput,{
+        text:data,
+        width:parseInt(qrSize.value,10)||240,
+        height:parseInt(qrSize.value,10)||240,
+        colorDark:qrDark.value,
+        colorLight:qrLight.value,
+        correctLevel:levels[qrLevel.value] || QRCode.CorrectLevel.M
+      });
+
+      generatedData=data;
+      downloadQrBtn.disabled=false;
+      copyQrBtn.disabled=false;
+      generatorStatus.textContent="QR code generated successfully.";
+      generatorStatus.classList.remove("err");
+    }catch(e){
+      generatedData="";
+      downloadQrBtn.disabled=true;
+      copyQrBtn.disabled=true;
+      generatorStatus.textContent="Could not generate this QR code. Try shorter text.";
+      generatorStatus.classList.add("err");
+    }
+  }
+
+  generateBtn.addEventListener("click",generateQr);
+
+  [qrSize,qrLevel,qrDark,qrLight].forEach(function(el){
+    el.addEventListener("change",function(){
+      if(generatedData) generateQr();
+    });
+  });
+
+  downloadQrBtn.addEventListener("click",function(){
+    var canvasEl=qrOutput.querySelector("canvas");
+    if(!canvasEl) return;
+    var a=document.createElement("a");
+    a.download="qr-code.png";
+    a.href=canvasEl.toDataURL("image/png");
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    flash("QR code downloaded");
+  });
+
+  copyQrBtn.addEventListener("click",function(){
+    var canvasEl=qrOutput.querySelector("canvas");
+    if(!canvasEl) return;
+
+    if(!canvasEl.toBlob || !navigator.clipboard || !window.ClipboardItem){
+      flash("Copy not supported — use Download PNG");
+      return;
+    }
+
+    canvasEl.toBlob(function(blob){
+      navigator.clipboard.write([new ClipboardItem({"image/png":blob})])
+        .then(function(){flash("QR code copied");})
+        .catch(function(){flash("Copy not supported — use Download PNG");});
+    },"image/png");
+  });
+
+  renderGeneratorFields();
+
 
   /* ---------- history ---------- */
   var KEY = "qrreader.history";
